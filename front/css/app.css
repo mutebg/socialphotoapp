@@ -1,0 +1,448 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-uswyur");
+  src: url("../fonts/icomoon.eot?#iefix-uswyur") format("embedded-opentype"), url("../fonts/icomoon.woff?-uswyur") format("woff"), url("../fonts/icomoon.ttf?-uswyur") format("truetype"), url("../fonts/icomoon.svg?-uswyur#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-dropbox:before {
+  content: "\f16b";
+}
+
+.icon-instagram:before {
+  content: "\f16d";
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 3px;
+  background-color: #09c;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #007399;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.btn--large, .btn--social {
+  font-size: 20px;
+  padding: 15px 25px;
+}
+
+.btn--social {
+  position: relative;
+  padding-left: 65px;
+}
+.btn--social:before {
+  font-family: 'icomoon';
+  position: absolute;
+  font-size: 32px;
+  left: 20px;
+  top: 10px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn--facebook {
+  background-color: #385A97;
+}
+.btn--facebook:before {
+  content: "\f09a";
+}
+
+.btn--instagram {
+  background-color: #32699A;
+}
+.btn--instagram:before {
+  content: "\f16d";
+}
+
+.btn--dropbox {
+  background-color: #4896CF;
+}
+.btn--dropbox:before {
+  content: "\f16b";
+}
+
+/* ALERTS */
+.alert {
+  padding: 15px 25px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  -webkit-transition: 0.3s linear all;
+          transition: 0.3s linear all;
+}
+
+.alert--success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert--error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert--info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert--warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.alert--fixed {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100%;
+  font: 18px/1.2 'Roboto', sans-serif;
+  color: #4C4C4C;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 10px 30px;
+}
+footer a {
+  display: inline-block;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.page {
+  width: 100%;
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.page--app {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.page--app header {
+  background: #09c;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.page--app footer a {
+  color: #a0a0a0;
+}
+
+.photo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.photo__btn {
+  position: fixed;
+  top: 50%;
+  background: #ccc;
+  z-index: 2;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 48px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+.photo__btn--prev {
+  left: 10px;
+}
+
+.photo__btn--next {
+  right: 10px;
+}
+
+.photo__btn--close {
+  top: 10px;
+  right: 10px;
+}
+
+.photo__frame {
+  width: 100%;
+  background: no-repeat center center;
+  background-size: auto 100%;
+  position: relative;
+  height: 100%;
+  box-shadow: inset 0 0 100px 0 #000;
+  z-index: 1;
+}
+
+.photo__caption {
+  position: fixed;
+  bottom: 0;
+  padding: 40px 20px 20px 20px;
+  z-index: 2;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.start-form {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 720px;
+  margin: 30px auto;
+  background: #F7F7F7;
+}
+
+.start-form__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.start-form__input {
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.loading {
+  position: relative;
+}
+
+.loading:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.loading:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  border: solid 5px #00526E;
+  border-radius: 50%;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    border-color: #00526E;
+  }
+  75% {
+    border-color: #0099CC;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    border-color: #00526E;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    border-color: #00526E;
+  }
+  75% {
+    border-color: #0099CC;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    border-color: #00526E;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/* Animation between veiws */
+.view-animation {
+  -webkit-transition: 0.3s all;
+          transition: 0.3s all;
+}
+.view-animation.ng-enter, .view-animation.ng-leave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.view-animation.ng-enter {
+  z-index: 11;
+  opacity: 0;
+}
+.view-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.view-animation.ng-leave {
+  z-index: 10;
+  opacity: 1;
+}
+.view-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}

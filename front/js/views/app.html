@@ -1,0 +1,9 @@
+<form ng-submit="app.getPhotos(app.form)" method="post" class="start-form" ng-class="{loading: app.isLoading}">
+	<h1 class="start-form__title">Select begin and end date of your photos in <strong>{{::app.form.social}}</strong></h1>
+	<input type="date" name="from" 	ng-model="app.form.from" 	class="start-form__input" />
+	<input type="date" name="to" 	ng-model="app.form.to"		class="start-form__input"/>
+	<input type="hidden" name="social" ng-model="app.form.social"/>
+	<button class="btn btn--large">Get photos</button>
+</form>
+
+<notification></notification>

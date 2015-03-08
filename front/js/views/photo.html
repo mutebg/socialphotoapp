@@ -1,0 +1,13 @@
+<div class="photo">
+	<a 	class="photo__btn photo__btn--close" ng-click="photo.close()">&times;</a>
+	
+	<div class="photo__btn photo__btn--prev"	ng-click="photo.direction(photo.photoIndex - 1)" 
+		ng-hide="photo.isFirst"><</div>
+	
+	<div class="photo__btn photo__btn--next" ng-click="photo.direction(photo.photoIndex + 1)" 
+		ng-hide="photo.isLast">></div>
+
+	<div class="photo__frame" style="background-image: url({{photo.image.path}})"></div>
+
+	<div class="photo__caption" ng-show="photo.image.name">{{photo.image.name}}</div>
+</div>
