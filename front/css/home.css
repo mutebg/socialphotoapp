@@ -61,6 +61,59 @@ em {
   font-style: italic;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100%;
+  font: 18px/1.2 'Roboto', sans-serif;
+  color: #4C4C4C;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 10px 30px;
+}
+footer a {
+  display: inline-block;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.page {
+  width: 100%;
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+  display: inline-block;
+  margin: 20px 0;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?-uswyur");
@@ -202,59 +255,6 @@ em {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 100;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  background-color: #fff;
-  min-height: 100%;
-  font: 18px/1.2 'Roboto', sans-serif;
-  color: #4C4C4C;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  text-align: right;
-  padding: 10px 30px;
-}
-footer a {
-  display: inline-block;
-  color: #fff;
-  margin-left: 20px;
-  font-size: 12px;
-}
-
-.page {
-  width: 100%;
-  background: no-repeat center center;
-  background-size: cover;
-  position: relative;
-  height: 100%;
-  padding: 0 30px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 42px;
-  color: #fff;
-  display: inline-block;
-  margin: 20px 0;
 }
 
 .page--welcome {
