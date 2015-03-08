@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 expand: true,
                 flatten: true,
                 src: 'front/css/*.css',
-                dest: 'res/css/'
+                dest: 'front/css/'
             }
         },
         
