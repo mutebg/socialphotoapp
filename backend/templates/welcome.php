@@ -18,7 +18,7 @@
 		
 		<h1 class="slogan">Create something amazing with our photo tool</h1>
 		
-		<p class="help">Login with your accaunt and browse photos</p>
+		<p class="help">Login with your account and browse photos</p>
 		
 		<div class="buttons">
 			<a href="<?=$this->data['facebook_login_url']?>" class="btn btn--social btn--facebook">Use Facebook</a>

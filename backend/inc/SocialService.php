@@ -10,6 +10,7 @@ class SocialService {
 		$serviceName = ucfirst($social) . 'Service';
 		if ( class_exists($serviceName) ) {
 			$this->api = new $serviceName($config); 
+			return true;
 		}
 		return false;
 	}

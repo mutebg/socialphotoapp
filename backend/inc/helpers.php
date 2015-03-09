@@ -5,12 +5,10 @@ function prepareName($string) {
 }
 
 function copyImage($url, $dest) {
-	try {
-		copy($url, $dest);
+	if ( copy($url, $dest) ) {
 		return true;
-	} catch (Exception $e) {
-		return false;
 	}
+	return false;
 }
 
 

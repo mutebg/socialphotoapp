@@ -33,14 +33,14 @@
 .photo__btn {
 	position: fixed;
 	top: 50%;
+    z-index: 2;
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
 	background: #ccc;
-	z-index: 2;
-	display: block;
-	width: 48px;
-	height: 48px;
-	border: 1px solid #fff;
-	border-radius: 50%;
-	cursor: pointer;
 	line-height: 48px;
 	text-align: center;
 	font-size: 2em;
@@ -61,32 +61,32 @@
 }
 
 .photo__frame {
-	width: 100%;
-  	background: no-repeat center center;
-  	background-size: auto 100%;
   	position: relative;
-  	height: 100%;
-  	box-shadow: inset 0 0 100px 0 #000;
-  	z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-shadow: inset 0 0 100px 0 #000;
+    background: no-repeat center center;
+    background-size: auto 100%;
 }
 
 .photo__caption {
 	position: fixed;
 	bottom: 0;
-	padding: 40px 20px 20px 20px;
-	z-index: 2;
-	background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 	width: 100%;
+    z-index: 2;
+    padding: 40px 20px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 	color: #fff;
 	text-align: center;
 }
 
 .start-form {
-	padding: 20px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
 	width: 720px;
 	margin: 30px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 	background: #F7F7F7;
 }
 
@@ -97,11 +97,11 @@
 
 .start-form__input {
 	width: 200px;
-	padding: 10px 15px;
-	border-radius: 2px;
-	border: 1px solid #ccc;
-	font-size: 20px;
 	margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    font-size: 20px;
 }
 
 .loading {
@@ -109,30 +109,30 @@
 }
 
 .loading:before {
-    content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 1;
     top: 0;
   	left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
 }
 
 .loading:after {
-    content: ''; 
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    margin-top: -20px; 
-    margin-left: -20px; 
     width: 40px; 
     height: 40px; 
+    margin-top: -20px; 
+    margin-left: -20px; 
+    z-index: 2;
+    content: ''; 
     border: solid 5px #00526E; 
     border-radius: 50%;
     transform-origin: center center; 
     animation:spin 1s linear infinite;
-    z-index: 2;
 }
 
 @keyframes spin {
@@ -156,11 +156,11 @@
     &.ng-enter,
     &.ng-leave {
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         background: #fff;
-        top: 0;
-        left: 0;
     }
     
     &.ng-enter {
